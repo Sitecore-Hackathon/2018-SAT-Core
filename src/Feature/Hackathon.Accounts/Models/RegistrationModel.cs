@@ -16,7 +16,6 @@ namespace Hackathon.Accounts.Models
         public string DateOfBirth { get; set; }
         [Required]
         public string Country { get; set; }
-        [Required]
         public string Gender { get; set; }
     }
 }
