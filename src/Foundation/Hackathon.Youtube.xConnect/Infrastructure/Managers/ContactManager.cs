@@ -1,13 +1,15 @@
-﻿using Sitecore.Diagnostics;
+﻿using Hackathon.Youtube.xConnect.Infrastructure.Facets;
+using Sitecore.Diagnostics;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
 using Sitecore.XConnect.Collection.Model;
+using System;
 
 namespace Hackathon.Youtube.xConnect.Infrastructure.Managers
 {
     public class ContactManager : IContactManager
     {
-        public void CreateContact(string firstName, string lastName, string email, string dateOfBirth, string gender, string country)
+        public void CreateContact(string firstName, string lastName, string email, DateTime birthDate, string gender, string country)
         {
             using (var client = Sitecore.XConnect.Client.Configuration.SitecoreXConnectClientConfiguration.GetClient())
             {
@@ -20,11 +22,11 @@ namespace Hackathon.Youtube.xConnect.Infrastructure.Managers
                     // Facet with a reference object, key is specified
                     PersonalInformation personalInfoFacet = new PersonalInformation()
                     {
-                        FirstName = "Myrtle",
-                        LastName = "McSitecore"
-                    };
-
-                    var reference = new FacetReference(contact, PersonalInformation.DefaultFacetKey);
+                        FirstName = firstName,
+                        LastName = lastName,
+                        Gender = gender,
+                        Birthdate = birthDate
+                    }; 
 
                     client.SetFacet(contact, PersonalInformation.DefaultFacetKey, personalInfoFacet);
 
@@ -37,7 +39,9 @@ namespace Hackathon.Youtube.xConnect.Infrastructure.Managers
 
                     client.SetFacet(contact, AddressList.DefaultFacetKey, addresses);
 
-                    // TODO: Add custom facets for storing gender and dateofBirth
+                    var customFacet = new CustomFacet("Test value");
+
+                    client.SetFacet(contact, CustomFacet.DefaultFacetKey, customFacet);
 
                     // Submits the batch, which contains two operations
                     client.Submit();
@@ -49,7 +53,7 @@ namespace Hackathon.Youtube.xConnect.Infrastructure.Managers
             }
         }
 
-        public void GetContactByIdentifier(string identifier)
+        public Contact GetContactByIdentifier(string identifier)
         {
             Assert.ArgumentNotNullOrEmpty(identifier, nameof(identifier));
 
@@ -60,12 +64,15 @@ namespace Hackathon.Youtube.xConnect.Infrastructure.Managers
                     var reference = new IdentifiedContactReference("youtube", identifier);
 
                     var contact = client.Get<Contact>(reference, new ContactExpandOptions() { });
+
+                    return contact;
                 }
                 catch (XdbExecutionException ex)
                 {
                     // Manage exceptions
+                    throw;
                 }
-            }
-        } 
+            }            
+        }
     }
 }

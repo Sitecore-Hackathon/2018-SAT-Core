@@ -27,7 +27,7 @@ namespace Hackathon.Accounts.Infrastructure
                     // TODO: set dOb gender country to contact in xDb
                     var contactManager = new ContactManager();
 
-                    contactManager.CreateContact(firstName, lastName, email, dateOfBirth, gender, country);
+                    contactManager.CreateContact(firstName, lastName, email, DateTime.Parse(dateOfBirth), gender, country);
                 }
             }
             catch (Exception ex)

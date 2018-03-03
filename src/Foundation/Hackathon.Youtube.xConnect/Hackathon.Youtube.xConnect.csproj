@@ -116,20 +116,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Hackathon\Foundation\Hackathon.Youtube.xConnect.config" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Infrastructure\Facets\CustomFacet.cs" />
     <Compile Include="Infrastructure\Managers\IContactManager.cs" />
     <Compile Include="Infrastructure\Managers\ContactManager.cs" />
+    <Compile Include="Infrastructure\Models\ContactExtendModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Views\web.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
