@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Web;
 using Google.Apis.Util.Store;
-using Sitecore.Mvc.Extensions;
 
 namespace Hackathon.Website.Services
 {
