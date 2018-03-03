@@ -1,10 +1,11 @@
 ﻿using Hackathon.Youtube.xConnect.Infrastructure.Managers;
 using System;
-using System.Web.Security;
+ using System.Web.Mvc;
+ using System.Web.Security;
 
 namespace Hackathon.Accounts.Infrastructure
 {
-    public class AccountManager
+    public class AccountManager : IAccountManager
     {
         private static string Domain = "extranet";
 
@@ -54,7 +55,8 @@ namespace Hackathon.Accounts.Infrastructure
             catch (System.Security.Authentication.AuthenticationException)
             {
       
-            }
+            }
+
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Analytics.Extensions
+
 <!doctype html>
 <html>
 <head>
@@ -9,13 +10,23 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="~/res/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="~/res/styles/font-awesome.min.css" rel="stylesheet">
+    <link href="~/res/styles/account.css" rel="stylesheet" type="text/css">
+    <link href="~/res/styles/header.css" rel="stylesheet" type="text/css">
 
     @Html.Sitecore().VisitorIdentification()
 
 </head>
 <body>
-    <h1>@Html.Sitecore().Field("Title")</h1>
-    <br />
-    <p>@Html.Sitecore().Field("Text")</p>
+    <header>
+        @Html.Sitecore().Placeholder("header")
+    </header>
+    <div>
+        @Html.Sitecore().Placeholder("content")
+        <h1>@Html.Sitecore().Field("Title")</h1>
+        <br />
+        <p>@Html.Sitecore().Field("Text")</p>
+    </div>
 </body>
 </html>

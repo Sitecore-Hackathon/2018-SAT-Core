@@ -78,14 +78,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="res\scripts\bootstrap.js" />
+    <Content Include="res\scripts\bootstrap.min.js" />
+    <Content Include="res\scripts\jquery-1.9.1.js" />
+    <Content Include="res\scripts\jquery-1.11.1.js.js" />
+    <Content Include="res\scripts\jquery-1.9.1.min.js" />
+    <Content Include="res\styles\account.css" />
+    <Content Include="res\styles\bootstrap-theme.css" />
+    <Content Include="res\styles\bootstrap-theme.min.css" />
+    <Content Include="res\styles\bootstrap.css" />
+    <Content Include="res\styles\bootstrap.min.css" />
+    <Content Include="res\styles\font-awesome.css" />
+    <Content Include="res\styles\font-awesome.min.css" />
+    <Content Include="res\styles\header.css" />
     <Content Include="Views\Website\Layouts\Layout.cshtml" />
     <Content Include="Views\Website\web.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="res\styles\bootstrap-theme.css.map" />
+    <Content Include="res\styles\bootstrap-theme.min.css.map" />
+    <Content Include="res\styles\bootstrap.css.map" />
+    <Content Include="res\styles\bootstrap.min.css.map" />
+    <Content Include="Views\Website\Renderings\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
