@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hackathon.Youtube.xConnect.Infrastructure.Managers;
+using System;
 using System.Web.Security;
 
 namespace Hackathon.Accounts.Infrastructure
@@ -22,7 +23,10 @@ namespace Hackathon.Accounts.Infrastructure
                     Sitecore.Security.UserProfile userProfile = user.Profile;
                     userProfile.FullName = string.Format("{0} {1}", firstName, lastName);
 
-                    // TODO: set dOb gender country to contact in xDb   
+                    // TODO: set dOb gender country to contact in xDb
+                    var contactManager = new ContactManager();
+
+                    contactManager.CreateContact(firstName, lastName, email, dateOfBirth, gender, country);
                 }
             }
             catch (Exception ex)

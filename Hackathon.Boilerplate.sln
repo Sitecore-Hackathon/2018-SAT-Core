@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Website", "src\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Accounts", "src\Feature\Hackathon.Accounts\Hackathon.Accounts.csproj", "{B7146D1F-B57B-4C32-BBBA-4A5F0B654F1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Youtube.xConnect", "src\Foundation\Hackathon.Youtube.xConnect\Hackathon.Youtube.xConnect.csproj", "{8327EE23-96B5-4095-AD31-760A45B7F13B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{B7146D1F-B57B-4C32-BBBA-4A5F0B654F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7146D1F-B57B-4C32-BBBA-4A5F0B654F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7146D1F-B57B-4C32-BBBA-4A5F0B654F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8327EE23-96B5-4095-AD31-760A45B7F13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8327EE23-96B5-4095-AD31-760A45B7F13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8327EE23-96B5-4095-AD31-760A45B7F13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8327EE23-96B5-4095-AD31-760A45B7F13B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{0835B7A0-AA33-4A12-853C-4B0FC5A6A248} = {15D97D61-D597-42EC-B7E9-E9EC8130E630}
 		{A16F1238-2D98-484D-9558-A4101D0B2B47} = {0835B7A0-AA33-4A12-853C-4B0FC5A6A248}
 		{B7146D1F-B57B-4C32-BBBA-4A5F0B654F1B} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{8327EE23-96B5-4095-AD31-760A45B7F13B} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
