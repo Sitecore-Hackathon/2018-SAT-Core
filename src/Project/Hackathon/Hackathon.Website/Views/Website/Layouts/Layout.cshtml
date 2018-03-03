@@ -1,0 +1,21 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    @Html.Sitecore().VisitorIdentification()
+
+</head>
+<body>
+    <h1>@Html.Sitecore().Field("Title")</h1>
+    <br />
+    <p>@Html.Sitecore().Field("Text")</p>
+</body>
+</html>
