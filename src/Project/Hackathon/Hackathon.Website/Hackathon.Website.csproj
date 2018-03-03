@@ -57,7 +57,6 @@
     <Compile Include="Controllers\YoutubeController.cs" />
     <Compile Include="Pipelines\Initialize\InitializeRoutes.cs" />
     <Compile Include="Services\AppFlowMetadata.cs" />
-    <Compile Include="Services\CustomDataStore.cs" />
     <Compile Include="Youtube\APIKey.cs" />
     <Compile Include="Youtube\GroupItemsSample.cs" />
     <Compile Include="Youtube\GroupsSample.cs" />

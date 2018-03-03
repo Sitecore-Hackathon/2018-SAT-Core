@@ -34,9 +34,21 @@ namespace Hackathon.Website.Controllers
                         ApplicationName = Assembly.GetExecutingAssembly().GetName().Name
                     });
 
-                    var channel = "UCWktOA8EqJ7DW29fsczM0ZA";
+                    var channel = "channel==UCWktOA8EqJ7DW29fsczM0ZA";
+                    var metrics = "viewerPercentage";
+                    var dimensions = "ageGroup,gender";
+                    var filters = "video==0NIMC2HkDFM";
+                    var data = service.Reports.Query(channel, "2016-01-01", "2018-01-01", metrics);
+                    data.Dimensions = dimensions;
+                    // data.Filters = filters;
 
-                    var data = service.Reports.Query(channel, "2017-01-01", "2018-01-01", "likes");
+                    var results = data.Execute();
+
+                    // data = (ReportsResource.QueryRequest)SampleHelpers.ApplyOptionalParms(data, null);
+
+                    // Requesting data.
+                    // var test =  data.Execute();
+
                     return Content("OK");
                 }
 
