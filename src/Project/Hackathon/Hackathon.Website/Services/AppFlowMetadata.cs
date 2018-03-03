@@ -20,7 +20,7 @@ namespace Hackathon.Website.Services
                     ClientSecret = "3jETDqg-vx8Wl84M_UfgFDzh"
                 },
                 Scopes = new[] {YouTubeAnalyticsService.Scope.YtAnalyticsReadonly},
-                DataStore = new CustomDataStore()
+                DataStore = new FileDataStore("c:\\temp\\", true)
             };
             Flow = new GoogleAuthorizationCodeFlow(initializer);
         }           

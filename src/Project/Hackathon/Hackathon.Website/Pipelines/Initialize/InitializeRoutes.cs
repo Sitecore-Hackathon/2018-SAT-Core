@@ -14,7 +14,7 @@ namespace Hackathon.Website.Pipelines.Initialize
 
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.MapRoute("Default", "xconnect/{controller}/{action}", new { controller = "Home", action = "Index" });
+            routes.MapRoute("Default-Mvc", "{controller}/{action}", new { controller = "Home", action = "Index" });
         }
     }
 }

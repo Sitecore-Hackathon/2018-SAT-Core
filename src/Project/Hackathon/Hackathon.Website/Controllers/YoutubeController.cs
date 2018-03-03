@@ -3,10 +3,12 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Auth.OAuth2.Mvc;
 using Google.Apis.Services;
 using Google.Apis.YouTubeAnalytics.v1;
 using Hackathon.Website.Services;
+using Hackathon.Website.Youtube;
 
 namespace Hackathon.Website.Controllers
 {
@@ -32,7 +34,9 @@ namespace Hackathon.Website.Controllers
                         ApplicationName = Assembly.GetExecutingAssembly().GetName().Name
                     });
 
-                    var data = service.Reports.Query("UCeNpzcxM-hUhnabwC7oZeYw", "2017-01-01", "2018-01-01", "likes");
+                    var channel = "UCWktOA8EqJ7DW29fsczM0ZA";
+
+                    var data = service.Reports.Query(channel, "2017-01-01", "2018-01-01", "likes");
                     return Content("OK");
                 }
 

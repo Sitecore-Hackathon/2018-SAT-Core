@@ -58,6 +58,13 @@
     <Compile Include="Pipelines\Initialize\InitializeRoutes.cs" />
     <Compile Include="Services\AppFlowMetadata.cs" />
     <Compile Include="Services\CustomDataStore.cs" />
+    <Compile Include="Youtube\APIKey.cs" />
+    <Compile Include="Youtube\GroupItemsSample.cs" />
+    <Compile Include="Youtube\GroupsSample.cs" />
+    <Compile Include="Youtube\Oauth2Authentication.cs" />
+    <Compile Include="Youtube\ReportsSample.cs" />
+    <Compile Include="Youtube\SampleHelpers.cs" />
+    <Compile Include="Youtube\ServiceAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Google.Apis, Version=1.32.2.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
@@ -185,7 +192,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58023</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
