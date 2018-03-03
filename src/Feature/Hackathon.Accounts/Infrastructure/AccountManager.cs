@@ -1,7 +1,6 @@
 ﻿using Hackathon.Youtube.xConnect.Infrastructure.Managers;
 using System;
- using System.Web.Mvc;
- using System.Web.Security;
+using System.Web.Security;
 
 namespace Hackathon.Accounts.Infrastructure
 {

@@ -41,6 +41,7 @@ namespace Hackathon.Accounts.Controllers
                 ModelState.AddModelError("", "");
                 return Redirect("/");
             }
+            else
             {
                 ModelState.AddModelError("", "User already exists");
             }
